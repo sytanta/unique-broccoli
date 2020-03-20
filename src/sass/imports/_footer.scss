@@ -102,6 +102,87 @@
   text-align: center;
 }
 
+.footer-below {
+  background-color: #000000;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  padding: 1rem;
+
+  &,
+  a {
+    color: hsla(0, 0%, 100%, 0.7);
+  }
+
+  a {
+    border: none;
+  }
+
+  .copyright {
+    font-size: 1.25rem;
+    padding: 0.5rem 1rem;
+
+    &:hover,
+    &:focus {
+      color: #ffffff;
+    }
+  }
+
+  .oasis-required-language {
+    font-size: 14px;
+    line-height: 1.5;
+
+    p {
+      margin: 0.6rem 0;
+    }
+
+    a {
+      text-decoration: underline;
+
+      &:hover,
+      &:active {
+        color: hsla(0, 0%, 100%, 0.7);
+      }
+    }
+  }
+
+  .link {
+    display: inline-block;
+    fill: #fff;
+    margin-right: 0.25rem;
+
+    &:link,
+    &:active,
+    &:focus,
+    &:visited {
+      transition: color 0.15s ease-in;
+    }
+
+    &:hover {
+      .new-window {
+        opacity: 1;
+      }
+    }
+  }
+
+  .twitter:hover {
+    fill: #1da1f2;
+  }
+  .youtube:hover {
+    fill: #cd201f;
+  }
+  .github:hover {
+    fill: #6cc644;
+  }
+
+  .new-window {
+    display: inline-block;
+    line-height: 1.15;
+    opacity: 0;
+    vertical-align: top;
+  }
+}
+
 @media only screen and (max-width: 800px) {
   .footer-branding {
     -webkit-flex: 0 0 100%;
@@ -114,6 +195,19 @@
     -webkit-flex: 0 0 50%;
     -ms-flex: 0 0 50%;
     flex: 0 0 50%;
+  }
+
+  .footer-below {
+    & > * {
+      -webkit-flex: 0 0 100%;
+      -ms-flex: 0 0 100%;
+      flex: 0 0 100%;
+    }
+
+    .oasis-required-language,
+    .links {
+      margin-top: 0.8rem;
+    }
   }
 }
 
